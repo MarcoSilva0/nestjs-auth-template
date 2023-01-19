@@ -10,7 +10,7 @@ async function bootstrap() {
         origin: 'http://localhost',
         credentials: true
     });
-    await app.listen(3000);
+    await app.listen(process.env.APP_PORT ? parseInt(process.env.APP_PORT) : 3000);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map
